@@ -5,13 +5,15 @@
  * @av: array of strings (arguments)
 */
 
-int main(int ac, char **av)
+int main(int ac, char ** av)
 {
-    int i;
-    for(i = 0; i < ac; i++)
-    {
-        (void) ac;
-        printf("%s\n", av[i]);
-    }
-    return (0);
+	int i = 0;
+
+	printf("the argument count is %d\n", ac);
+	printf("the second one is %s\n", av[0]);
+
+	for (i = 0; i < ac; i++)
+		printf("%d : %s\n", i+1, av[i]);
+	
+	return (0);
 }
