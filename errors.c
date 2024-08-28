@@ -6,6 +6,19 @@
  *
  * Return: unspecified
  */
+void _eputs(char *str)
+{
+    int a = 0;
+
+    if (!str)
+        return;
+    while (str[a] != '\0') 
+    {
+        _eputchar(str[a]);
+        a++;
+    }
+}
+/*
 
 void _eputs(char *str)
 {
@@ -20,7 +33,7 @@ void _eputs(char *str)
 	}
 }
 
-/**
+*
  * _eputchar - funct that writes the character c to stderr
  * @c: The character to print
  *
