@@ -43,7 +43,7 @@ char **list_to_strings(list_t *head)
 		if (!str)
 		{
 			for (a = 0; a < i; a++)
-				free(strs[j]);
+				free(strs[a]);
 			free(strs);
 			return (NULL);
 		}
