@@ -141,15 +141,6 @@ char *_strncpy(char *, char *, int);
 char *_strncat(char *, char *, int);
 char *_strchr(char *, char);
 
-void _eputs(const char *str);
-char *input_buf(void);
-void sigintHandler(int sig);
-char *_getline(void);
-void get_input(void);
-void read_buf(void);
-void build_history_list(void);
-void write_history(void);
-void read_history(void);
 
 char **strtow(char *, char *);
 char **strtow2(char *, char);
