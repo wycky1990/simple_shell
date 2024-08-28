@@ -91,9 +91,11 @@ int read_history(info_t *info)
 	for (i = 0; i < fsize; i++)
 	{
 		if (buf[i] == '\n')
+		{
 			buf[i] = 0;
 			build_history_list(info, buf + last, linecount++);
 			last = i + 1;
+		}
 	}
 	if (last != i)
 		build_history_list(info, buf + last, linecount++);
