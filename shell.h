@@ -1,4 +1,4 @@
-#ifndeif _SHELL_H_
+#ifndef _SHELL_H_
 #define _SHELL_H_
 
 #include <stdio.h>
@@ -168,7 +168,7 @@ int _myhelp(info_t *);
 int _myhistory(info_t *);
 int _myalias(info_t *);
 
-size_t get_input(info_t *);
+ssize_t get_input(info_t *);
 int _getline(info_t *, char **, size_t *);
 void sigintHandler(int);
 
