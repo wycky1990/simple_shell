@@ -7,7 +7,10 @@
  */
 int main(int ac, char **av, char **env)
 {
-    unsigned int i;
+	unsigned int i;
+
+	(void)ac;
+	(void)av;
 
     i = 0;
     while (env[i] != NULL)
@@ -17,3 +20,4 @@ int main(int ac, char **av, char **env)
     }
     return (0);
 }
+
