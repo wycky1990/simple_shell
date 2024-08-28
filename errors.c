@@ -6,6 +6,7 @@
  *
  * Return: unspecified
  */
+/*
 void _eputs(char *str)
 {
     int a = 0;
@@ -18,7 +19,7 @@ void _eputs(char *str)
         a++;
     }
 }
-/*
+*
 
 void _eputs(char *str)
 {
