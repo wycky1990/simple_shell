@@ -1,4 +1,8 @@
 #include "shell.h"
+#include <unistd.h>  
+
+#define WRITE_BUF_SIZE 1024
+#define BUF_FLUSH -1
 
 /**
  * _strcpy - function that copies a string
@@ -76,15 +80,16 @@ void _puts(char *str)
 
 int _putchar(char c)
 {
-	static int i;
-	static char buf[WRITE_BUF_SIZE];
+    static int i;
+    static char buf[WRITE_BUF_SIZE];
 
-	if (c == BUF_FLUSH || a >= WRITE_BUF_SIZE)
-	{
-		write(1, buf, a);
-		a = 0;
-	}
-	if (c != BUF_FLUSH)
-		buf[a++] = c;
-	return (1);
+    if (c == BUF_FLUSH || i >= WRITE_BUF_SIZE)
+    {
+        write(1, buf, i);
+        i = 0;
+    }
+    if (c != BUF_FLUSH)
+        buf[i++] = c;
+    
+    return (1);
 }
